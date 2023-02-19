@@ -1,3 +1,4 @@
+
 .background{
     background-image: url(./images//bacground1.jpg);
     height: 110vh;
@@ -6,15 +7,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    display: grid;
-    grid-template-rows: 80px auto;
     justify-content: center;
     align-items: center;
     overflow: scroll;
+    display: grid;
+    grid-template-rows: 80px auto;
+  
+
 }
 .namePage  {
     width: 100%;
-    grid-row: 1/2;
+    /* grid-column: 1/2;
+    grid-row: 1/2; */
     text-align: center;
     align-self: center;
     font-size: 30px;
@@ -22,6 +26,17 @@
     background-color: rgba(129, 129, 129, 0.5);
     border-radius: 0.5rem;
 }
+.favouritesList{
+
+
+}
+.favouritesContainer {
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    gap: 20px;
+}
+
 
 @media (min-width:961px){
     .background{
@@ -38,15 +53,19 @@
         align-items: center;
         overflow: scroll;
     }
-}
-.namePage{
-    align-items: center;
-    grid-column: 1/4;
-}
-.favouritesList{
-    grid-column: 2/4;
-    grid-row: 2/3;
-    display: grid;
-    gap: 30px;
-    grid-template-columns: auto auto auto;
+    .namePage{
+        align-items: center;
+        grid-column: 1/4;
+    }
+    .favouritesList{
+        grid-column: 2/4;        
+    }
+    .favouritesContainer {
+        grid-column: 2/4;
+        grid-row: 2/3;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: auto auto auto;
+    }
+
 }

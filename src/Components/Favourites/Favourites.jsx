@@ -7,27 +7,27 @@ const Favourites = (favourites)=>{
     return (
         <div className={style.background}>
             <p className={style.namePage}>Favorites List</p>
-                <section className={style.favouritesList}>
-                    {
-                    favourites.favourites.map(dog => {
-                        const {id, name,life_span,weight,height,temperament} = dog;
-                        let image = toolTestFromImage(dog.image);   
-                        return(
-                            <Dog
-                                key = {id + Math.random() - Math.random()}
-                                id = {id}
-                                whereFrom= {'favouritesComponent'}   
-                                name = {name}
-                                image = {image}
-                                temperament = {temperament}
-                                weight = {weight}
-                                height = {height}
-                                life_span = {life_span}
-                            />
-                        )
-                    })
-                    }
-                </section>
+            <section className={style.favouritesList}>
+                <div className={style.favouritesContainer}>
+                    {favourites.favourites.map(dog => {
+                    const {id, name,life_span,weight,height,temperament} = dog;
+                    let image = toolTestFromImage(dog.image);   
+                    return(
+                        <Dog
+                        key={id + Math.random() - Math.random()}
+                        id={id}
+                        whereFrom={'favouritesComponent'}   
+                        name={name}
+                        image={image}
+                        temperament={temperament}
+                        weight={weight}
+                        height={height}
+                        life_span={life_span}
+                        />
+                    )
+                    })}
+                </div>
+            </section>
         </div>
     );
 };
@@ -42,3 +42,30 @@ export default  connect(
     mapStateToProps,
     mapDispatchToProps
 )(Favourites);
+
+
+
+
+                // <section className={style.favouritesList}>
+                // {
+                //     (favourites.favourites.map(dog => {
+                //         const {id, name,life_span,weight,height,temperament} = dog;
+                //         let image = toolTestFromImage(dog.image);   
+                //         return (
+                //             
+                //                 <Dog
+                //                 key = {id*Math.random() + Math.random()*Math.random() - Math.random()}
+                //                 id = {id}
+                //                 whereFrom= {'favouritesComponent'}   
+                //                 name = {name}
+                //                 image = {image}
+                //                 temperament = {temperament}
+                //                 weight = {weight}
+                //                 height = {height}
+                //                 life_span = {life_span}
+                //                 />
+                //             
+                //         )
+                //     }))
+                // }
+                // </section>
