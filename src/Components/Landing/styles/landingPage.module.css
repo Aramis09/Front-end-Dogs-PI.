@@ -17,18 +17,15 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* background-color: aqua; */
-
-    /* background-color: red; */
     height: 100vh;
     width: 100vw;
 }
 .fondo2{
-    background:linear-gradient(rgba(255,255,255,0),rgba(0,0,0,0.7));
+    background:linear-gradient(rgba(255,255,255,0),rgba(0,0,0,0.9));
     background-repeat: no-repeat;
     background-attachment: fixed;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: absolute;
     background-size: 100%;
     background-position: center center;
@@ -42,11 +39,16 @@
     grid-template-rows: 50px 50px 430px 100px;
 }
 .enterHome{
-    position: absolute;
-
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
+    max-width: fit-content;
+    text-align: center;
 
+}
+.enterHome h4,.enterHome button {
+    align-items: center;
+    
 }
 .body{
     /* background-color: red; */
@@ -96,7 +98,7 @@ button{
 
 /* media querys  home 0px 320px 480px 768px 960px 1024px 1328px medidas para responsive*/
 
-@media (min-width:376px) and (max-width:479px) {
+/* @media (min-width:376px) and (max-width:479px) {
     .fondo{
         background-color: orangered;
     }
@@ -115,7 +117,7 @@ button{
         font-size: large;
         margin-top: 30px;
     }
-}
+} */
 
 @media (min-width:480px) and (max-width:767px) {
     .fondo{
@@ -124,6 +126,7 @@ button{
     .fondo2{
         grid-template-rows: 50px 50px 750px 100px;
     }
+
     footer img {
         width: 70px;
     }
@@ -205,7 +208,6 @@ button{
 
 @media (min-width:1025px) {
     .fondo{
-        /* background-image: url(./images/background2.jpg); */
         width: 100%;
         position: absolute;
         background-size: cover;
@@ -218,14 +220,7 @@ button{
         grid-template-columns: 50% 50%;
         
     }
-    .enterHome{
-        position: absolute;
-        top: 30%;
-        left: 40%;
-        text-align: center;
-        margin: 0 auto;
-
-    }
+   
     .navigation{
         grid-column: 2/3;
         grid-row: 1;
@@ -239,9 +234,18 @@ button{
     }
     .body{
         grid-column: 1/3;
-        margin-top: 150px;
-        margin-left: 250px;
         font-size: 50px;
+        align-self: center;
+    }
+    .enterHome{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+    }
+    .enterHome h4,.enterHome button {
+        align-items: center;
+        
     }
     .footer{
         grid-column: 1/3;
