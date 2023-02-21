@@ -69,7 +69,7 @@ const Create = ({getDogsListFromServer,dogListDependency}) => {
     };
 
     const hanlderAddTemperForUpload = temperForAdd => {
-        setTempersAddToUpload([...tempersAddToUpload,temperForAdd]);
+        if(!tempersAddToUpload.includes(temperForAdd))setTempersAddToUpload([...tempersAddToUpload,temperForAdd]);
     };
 
     const HanlderDeleteTemperForUpload = temperForDelete => {
@@ -91,17 +91,17 @@ const Create = ({getDogsListFromServer,dogListDependency}) => {
                     <div className={style.characteristicsDog}>
                         <p className={style.tittles}>Weight</p>
                         <input type="text" name="form_Weight" placeholder="Lesser Value - Higher Value" onChange={(ev) => {handlerChangesForm(ev.target.value,'weight')}}/>
-                        <p className={style.warningForm}>{warning.weight}kg</p>
+                        <p className={style.warningForm}>{warning.weight}</p>
                     </div>
                     <div className={style.characteristicsDog}>
                         <p className={style.tittles}>Height</p>
                         <input type="text" name="form_Height" placeholder="Lesser Value - Higher Value" onChange={(ev) => {handlerChangesForm(ev.target.value,'height')}}></input>
-                        <p className={style.warningForm}>{warning.height} cm</p>
+                        <p className={style.warningForm}>{warning.height}</p>
                     </div>
                     <div className={style.characteristicsDog}>
                         <p className={style.tittles}>Life Span</p>
                         <input type="text" name="form_Life_Span" placeholder="Lesser Value -Higher Value" onChange={(ev) => {handlerChangesForm(ev.target.value,'lifeSpan')}}></input>
-                        <p className={style.warningForm}>{warning.lifeSpan} years</p>
+                        <p className={style.warningForm}>{warning.lifeSpan}</p>
                     </div>
                     <div>
                     
@@ -121,8 +121,8 @@ const Create = ({getDogsListFromServer,dogListDependency}) => {
                             {arrayOfTempers.map(temper =>{
                                 return (
                                     <option value={temper} key={1-Math.random()+Math.random()}> 
-                                            {temper}
-                                        </option>
+                                        {temper}
+                                    </option>
                                     );
                                 })}
                         </select>

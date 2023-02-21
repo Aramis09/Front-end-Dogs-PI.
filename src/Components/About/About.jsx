@@ -17,7 +17,7 @@ const About = ()=>{
                             soy muy consciente que sin un buen ambiente laboral las cosas no progresan de la mejor manera (haciendo énfasis en progreso Individual y grupal)
                         </p>
                     </div>
-                    <img src={personal_image} alt="" />
+                    <img src={personal_image} alt="person_image" />
                 </section>
                 <section className={styles.proyect}>
                         <div>

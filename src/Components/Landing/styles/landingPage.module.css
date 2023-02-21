@@ -98,7 +98,7 @@ button{
 
 /* media querys  home 0px 320px 480px 768px 960px 1024px 1328px medidas para responsive*/
 
-/* @media (min-width:376px) and (max-width:479px) {
+@media (min-width:376px) and (max-width:479px) {
     .fondo{
         background-color: orangered;
     }
@@ -117,11 +117,12 @@ button{
         font-size: large;
         margin-top: 30px;
     }
-} */
+}
 
-@media (min-width:480px) and (max-width:767px) {
+@media (min-width:480px) and (max-width:768px) {
     .fondo{
-        background-color: rgb(158, 62, 117);
+        background-color: rgb(73, 83, 8);
+        width: 100vw;
     }
     .fondo2{
         grid-template-rows: 50px 50px 750px 100px;
@@ -137,6 +138,18 @@ button{
         font-size: 50px;
         margin-top: 230px;
     }
+    .enterHome{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: fit-content;
+        text-align: center;
+    
+    }
+    .enterHome h4,.enterHome button {
+        align-items: center;
+        
+    }
     .body button{
         padding: 50px;
         font-size: xx-large;
@@ -145,9 +158,10 @@ button{
 }
 
 
-@media (min-width:768px) and (max-width:959px) {
+@media (min-width:769px) and (max-width:959px) {
     .fondo{
         background-color: rgb(158, 62, 117);
+        width: 100%;
     }
     .fondo2{
         grid-template-rows: 50px 50px 800px 100px;

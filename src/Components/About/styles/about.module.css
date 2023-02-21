@@ -1,3 +1,4 @@
+
 .background{
     background-image: url(./images/background.jpg);
     height: 110vh;
@@ -16,7 +17,7 @@ a{
 }
 
 .container{
-    max-width: 80%;
+    max-width: 100%;
     display: flex;
     margin: 0 auto;
     flex-direction: column;
@@ -30,10 +31,11 @@ a{
     backdrop-filter: blur(150px);
     background-image: linear-gradient( rgba(255, 157, 0, 0.3),rgba(0, 0, 0, 0.3));
     margin-top: 20px;
-    width: 300px;
+    width: 330px;
     border-radius:1rem ;
     display: flex;
     justify-content: center;
+    padding: 10px;
 
     
 }
@@ -46,10 +48,10 @@ a{
     font-weight: 100;
 }
 .presentation img{
-    align-self: center;
+    align-self: flex-start;
     width: 150px;
     height: 150px;
-    margin: 10px;
+    
     border-radius: 1rem;
 }
 .presentation h4{
@@ -57,13 +59,15 @@ a{
 }
 
 .proyect{
-    width: 300px;
+    width: 330px;
     -webkit-backdrop-filter: blur(150px);
     backdrop-filter: blur(150px);
     background-image: linear-gradient( rgba(68, 166, 223, 0.5),rgba(0, 0, 0, 0.3));
     margin-top: 20px;
     border-radius: 1rem;
     font-size: 20px;
+    padding: 10px;
+    
 }
 .proyect p {
     margin: 10px;
@@ -91,14 +95,15 @@ a{
     -webkit-backdrop-filter: blur(150px);
     backdrop-filter: blur(150px);
     background-image: linear-gradient( rgba(183, 56, 222, 0.5),rgba(0, 0, 0, 0.3));
-    width: 300px;
+    width: 330px;
     border-radius: 1rem;
     text-align: left;
     font-size: 10px;
     margin-top: 20px;
+    padding: 10px;
 }
 .attributors h4{
-    font-size: 20px;
+    font-size: 10px;
 }
 .links{
     margin: 10px;
