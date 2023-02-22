@@ -1,4 +1,5 @@
 export const toolConvertBase64ToBlobForImages = async image =>{
+    if(!image) return
     const verificationFrom = image.slice(0,8);
     if(verificationFrom === 'https://') return image;
     const base64Response = await fetch(`data:image/jpeg;base64,${image}`);

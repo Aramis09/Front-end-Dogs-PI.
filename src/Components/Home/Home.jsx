@@ -18,9 +18,10 @@ const Home = ({modifyInStoreTheDogs,backUpDogList,restorDogList,getDogsListFromS
     useEffect( () => {
         if(!dogsFromStore.loaded || dogsFromStore.dogs.length === 0){
             // const bringDogs = async () => {
+            //     await getDogsListFromServer();
             // }
-            // bringDogs();
-            getDogsListFromServer();
+            //     bringDogs();
+                getDogsListFromServer();
         };
         if(dogsFromStore.loaded) {
             // dogs.dogs.forEach(dog => console.log(dog.diets))

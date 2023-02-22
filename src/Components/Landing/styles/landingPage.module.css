@@ -19,7 +19,9 @@
     background-attachment: fixed;
     height: 100vh;
     width: 100vw;
+    
 }
+
 .fondo2{
     background:linear-gradient(rgba(255,255,255,0),rgba(0,0,0,0.9));
     background-repeat: no-repeat;
@@ -198,6 +200,7 @@ button{
         grid-template-rows: 50px 50px 600px 100px;
         grid-template-columns: 50% 50%;
         
+        
     }
     .navigation{
         grid-column: 2/3;
@@ -222,13 +225,13 @@ button{
 
 @media (min-width:1025px) {
     .fondo{
-        height: 110vh;
+        height: 100vh;
         width: 100%;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
         position: absolute;
-        overflow-y:scroll ;
+        
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -236,7 +239,7 @@ button{
     .fondo2{
         grid-template-rows: 50px 50px 500px 90px;
         grid-template-columns: 50% 50%;
-        height: 110vh;
+        height: 100vh;
         width: 100%;
         background-position: center center;
         background-repeat: no-repeat;
@@ -287,6 +290,18 @@ button{
         align-items: center;
         padding: 80px;
         margin: 60px;
+    }
+    *::-webkit-scrollbar{
+        background: rgba(204, 168, 8, 0);
+        width:10px;
+        height: 9px;
+        position: absolute;
+    }
+    *::-webkit-scrollbar-thumb{
+        background-color: rgba(172, 172, 172, 1);
+        position: absolute;
+        width: 10px;
+        border-radius: 5rem;
     }
 
 }

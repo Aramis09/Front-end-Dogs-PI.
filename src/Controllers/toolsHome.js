@@ -45,7 +45,7 @@ export const toolLowerWeightOrder = dogsListFromStore => {
 export const toolTestFromImage = (image)=>{
     // if(!image) return image;//esto tengo que borrar, es solo para probar momentaneamente.
     if(typeof(image) === 'string') return image; //esto comprueba si es la imagen en base64;
-    return image.url;
+    return image?.url;
 };
 
 export const toolConvertToArrayOfStrings = arrayTemperFromDb=>{

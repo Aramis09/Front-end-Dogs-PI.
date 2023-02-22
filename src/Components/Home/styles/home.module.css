@@ -303,6 +303,7 @@
         width: 100%;
         background-color: cadetblue;
         align-self: center;
+        position: fixed;
     }
     .gridContainer{
         width: 100vw;

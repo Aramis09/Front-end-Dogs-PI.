@@ -57,6 +57,10 @@ const Create = ({getDogsListFromServer,dogListDependency}) => {
     };
 //los 7 habitos de la gente altamente efectiva
     const handlerInputImage = blobImage => {// tengo que preguntar si blobImage existe.
+        if(blobImage.size > 2200000) {
+            setWarning({...warning, image: 'Please upload a image lower 2.2MB'} );
+            return 
+        };
         if(blobImage && (blobImage.type === 'image/png' || blobImage.type ==='image/jpeg')){
             let reader = new FileReader();
             reader.readAsDataURL(blobImage);
@@ -110,6 +114,7 @@ const Create = ({getDogsListFromServer,dogListDependency}) => {
                         <p className={style.tittles}>Upload a image that show the dog</p>
                         <input type="file" name="dog_Image" id="dog_Image" className={style.inputImage} onInput={(ev) => handlerInputImage(ev.target.files[0])}/>
                         <p className={style.warningForm}>It is mandatory to upload the image</p>
+                        <p className={style.warningForm}>{warning.image || 'Add an image'}</p>
                     <div className={style.imageUploaded}>
                         <p className={style.tittles}>Preview Image:</p>
                         <img src={imageUpload.preview} alt="" />
