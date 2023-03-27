@@ -56,13 +56,13 @@ export const postNewDogInDb = async(warning,formValue,imageUpload,tempersAddToUp
                 life_span:formValue.lifeSpan,
                 temper:tempersAddToUpload,
             };
-            await axios.post('https://back-end-dogs-pi-production.up.railway.app/dogs',newDog);
+            await axios.post('https://backend-pi-dogs.onrender.com/dogs',newDog);
         };
     };
 };
 
 export const getDogsFromDb = async ()=>{
-    const dogsFromDbResponse = await axios.get('https://back-end-dogs-pi-production.up.railway.app/dogs/db');
+    const dogsFromDbResponse = await axios.get('https://backend-pi-dogs.onrender.com/dogs/db');
     const dogsFromDb = dogsFromDbResponse.data;
     return dogsFromDb;
 };

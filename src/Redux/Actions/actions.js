@@ -9,7 +9,7 @@ const errorGetDogs = () => ({type:ERROR_GET_DOGS, payload:'Error get dogs'});
 export const getDogsListFromServer = () => {
     return  dispatch => {
      dispatch(startGetDogs());
-      axios('https://back-end-dogs-pi-production.up.railway.app/dogs')
+      axios('https://backend-pi-dogs.onrender.com/dogs')
       .then(response => {
          dispatch(succesGetDogs(response.data));
      })
@@ -42,7 +42,7 @@ const errorGetDogsByName = (payload) =>({type:ERROR_GET_DOGS_BY_BREED, payload})
 export const getDogsByName = payload => {
     return  dispatch => {
      dispatch(startGetDogsByName());
-      axios(`https://back-end-dogs-pi-production.up.railway.app/dogs?name=${payload}`)
+      axios(`https://backend-pi-dogs.onrender.com/dogs?name=${payload}`)
       .then(response => {
          dispatch(succesGetDogsByName(response.data));
      })

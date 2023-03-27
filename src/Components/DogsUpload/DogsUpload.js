@@ -24,7 +24,7 @@ const DogUpload = ({id,name,image,weight,height,life_span,temper,getDogsListFrom
     },[image]);
 
     const handlerDeleteDog= async() => {
-        await axios.delete(`https://back-end-dogs-pi-production.up.railway.app/dogs/${id}`);
+        await axios.delete(`https://backend-pi-dogs.onrender.com/dogs/${id}`);
         await getDogsListFromServer();
     };
     return(
